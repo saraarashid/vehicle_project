@@ -1,0 +1,20 @@
+answer:
+*	The web servers create/uses a thread to handle the request, and it gets back to listening.
+*	The new thread will understand the request, and start processing.
+*	Thread will realize this is a resource that is handled by the application server and hands set the request to the application server on the port it is on (8080).
+*	Application server will hand the request to a new /existing thread.
+*	The new thread will understand the request and start processing.
+*	Thread will initialize all resources that your application will use such as database connections, mail server connection, etc.
+*	Thread will determine which function to call inside your code base on the request and it will package the parameters as call parameters to the function.
+*	Code will process the business logic inside the function.
+*	Connect to the database and use the same resources initialized.
+*	Data ,well as the commands for the database will be converted from ruby to a text that your operating system  understands 
+*	Operating system will take the information from the application server port reads where it need to go then puts it through the port of the destination (database).
+*	Database will convert the information that came through to a language it understands (SQL) (unmashalling).
+*	Database thread will excite the statement, and then returns an answer to the operating system in a format that operating system will understand (marshalling).
+*	Operating system will take the information and places it through the port of the application server thread.
+*	Thread unmarshalls the information back into ruby and sends the result back to the calling function in the code.
+*	Thread will create an html /CSS/JavaScript page that will include the result of processing your business logic.
+*	Thread will apply some compression, combination and packing of code before sending back to the web server's calling thread as an http, https response.
+*	The web server's calling thread will send the information back to the client.
+
