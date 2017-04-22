@@ -1,0 +1,17 @@
+javascript:
+var a=[1,2,3,4];
+var b=["blue","pink","yelow","green"];
+var c=[];
+for(var i=0 ; i<a.length; i++){
+  for(var j=0 ; j<a.length; j++){
+  c=a[i]+b[i];
+}
+console.log(c);
+}
+
+rupy:
+a=[1,2,3,4]
+b=["blue","pink","yelow","green"]
+a=[1,2,3,4];
+a.zip(b).flatten.compact
+ 
