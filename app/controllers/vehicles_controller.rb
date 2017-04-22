@@ -72,3 +72,11 @@ class VehiclesController < ApplicationController
       params.require(:vehicle).permit(:vin, :year, :make, :model, :engine_type, :license_plate)
     end
 end
+def create
+    @requestrecord = Request.new(request_params)
+end
+
+private
+    def request_params
+       params.require(:request).permit({:item => []})
+    end
