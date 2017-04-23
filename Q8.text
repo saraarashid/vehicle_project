@@ -1,0 +1,46 @@
+javascript:
+var a=[2,7,9,3];
+var b= [3,4,5,1,2];
+var c=[5,9,4];
+var two=[];
+var three=[];
+var five=[];
+ for(var i=0; i<a.length ;i++){
+   if(a[i]%2===0){
+     two.push(a[i]);
+     console.log(two);
+    }
+  if(b[i]%3===0){
+     three.push(b[i]);
+     console.log(three);
+    }
+    if(c[i]%5===0){
+      five.push(c[i]);
+      console.log(five);
+    }
+}
+
+ruby:
+
+a=[2,7,9,3]
+b= [3,4,5,1,2]
+c=[5,9,4]
+ two= Array.new 
+ three= Array.new 
+ five= Array.new 
+ a.each do |value|
+   if value %2==0
+     two.push(value)
+     puts two
+   end
+   if value %3==0
+     three.push(value)
+     puts three
+ end
+  if value %5==0
+     five.push(value)
+     five.push(value)
+     puts five
+  end 
+end 
+   
